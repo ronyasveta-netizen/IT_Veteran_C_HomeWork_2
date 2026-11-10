@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             // task 1 ------------------------------------------------------------
-            int[] arr1 = { 15, 65, 89, -8, 89, 54, 258, 23 };
+            int[] arr1 = { -15, -65, 89, -8, -89, -54, -258, -23 };
             PrintSummMultiplElementArr(arr1);
             var result = arrSummMultiplElement2(arr1);
             Console.WriteLine("Summa  element  of  arr = " + result.a);
@@ -17,7 +17,7 @@
             printArray(arr1);
 
             //task 3 --------------------------------------------------------
-            Console.WriteLine(firstElevent(arr1,false));
+            Console.WriteLine(firstElevent(arr1));
 
 
 
@@ -105,7 +105,10 @@
                     else if (arr[i] >= 0)
                         continue;
                 }
-            Console.WriteLine("not elevent ");
+            if (flag)
+                Console.WriteLine("not positive elevent ");
+            else
+                Console.WriteLine("Not negative elevent");
             return 0;
         }
 
