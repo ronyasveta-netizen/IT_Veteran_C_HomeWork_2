@@ -105,7 +105,7 @@
                     else if (arr[i] >= 0)
                         continue;
                 }
-            Console.WriteLine("not elevent =  ");
+            Console.WriteLine("not elevent ");
             return 0;
         }
 
