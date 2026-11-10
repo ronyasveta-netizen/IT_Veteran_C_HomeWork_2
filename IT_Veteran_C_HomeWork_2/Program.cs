@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             // task 1 ------------------------------------------------------------
-            int[] arr1 = { 15, 65, 89, 8, 69 };
+            int[] arr1 = {-15, -65, -89, -8, -69 };
             PrintSummMultiplElementArr(arr1);
             var result = arrSummMultiplElement2(arr1);
             Console.WriteLine("Summa  element  of  arr = " + result.a);
@@ -17,7 +17,8 @@
             printArray(arr1);
 
             //task 3 --------------------------------------------------------
-
+            Console.WriteLine(firstElevent(arr1));
+            
 
 
         }
@@ -83,6 +84,29 @@
                 Console.Write(item + "\t"); 
             }
             Console.WriteLine();
+        }
+
+        static int firstElevent(int[] arr, bool flag = true)
+        {
+            if( flag )
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (arr[i] >= 0)
+                        return arr[i];
+                    else if (arr[i] < 0)
+                        continue;
+                }
+
+            else
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (arr[i] < 0)
+                        return arr[i];
+                    else if (arr[i] >= 0)
+                        continue;
+                }
+            Console.WriteLine("not elevent =  ");
+            return 0;
         }
 
 
