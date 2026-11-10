@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             // task 1 ------------------------------------------------------------
-            int[] arr1 = {-15, -65, -89, -8, -69 };
+            int[] arr1 = { 15, 65, 89, -8, 89, 54, 258, 23 };
             PrintSummMultiplElementArr(arr1);
             var result = arrSummMultiplElement2(arr1);
             Console.WriteLine("Summa  element  of  arr = " + result.a);
@@ -17,8 +17,8 @@
             printArray(arr1);
 
             //task 3 --------------------------------------------------------
-            Console.WriteLine(firstElevent(arr1));
-            
+            Console.WriteLine(firstElevent(arr1,false));
+
 
 
         }
@@ -54,12 +54,12 @@
             int indexMax = 0;
             for (int i = 1; i < arr.Length; i++)
             {
-                if( arr[i] < min_ )
+                if (arr[i] < min_)
                 {
                     min_ = arr[i];
                     indexMin = i;
                 }
-                if( arr[i] > max_ )
+                if (arr[i] > max_)
                 {
                     max_ = arr[i];
                     indexMax = i;
@@ -69,9 +69,9 @@
             Console.WriteLine($"Min element = {min_} index old {indexMin}");
             arr[indexMax] = min_;
             arr[indexMin] = max_;
-        
+
         }
-        static void Swap_(ref int a,ref int b)
+        static void Swap_(ref int a, ref int b)
         {
             int tmp = a;
             b = a;
@@ -80,15 +80,15 @@
         static void printArray(int[] arr)
         {
             foreach (var item in arr)
-            {  
-                Console.Write(item + "\t"); 
+            {
+                Console.Write(item + "\t");
             }
             Console.WriteLine();
         }
 
         static int firstElevent(int[] arr, bool flag = true)
         {
-            if( flag )
+            if (flag)
                 for (int i = 0; i < arr.Length; i++)
                 {
                     if (arr[i] >= 0)
