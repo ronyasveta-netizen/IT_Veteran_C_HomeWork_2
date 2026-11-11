@@ -23,6 +23,10 @@
 
         }
         // 1 ----------------
+        /// <summary>
+        /// друкує сумму і добуток елеметів в масиві
+        /// </summary>
+        /// <param name="arr">масив</param>
         static void PrintSummMultiplElementArr(int[] arr)
         {
             long sum = 0;
